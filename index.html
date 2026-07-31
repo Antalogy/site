@@ -135,7 +135,7 @@ a:hover{text-decoration:underline}
 .shot-wrap img{
   width:100%;
 }
-.shot-caption{margin-top:18px;font-size:14px;letter-spacing:-.016em;color:var(--gray)}
+.shot-caption{margin-top:18px;font-size:17px;letter-spacing:-.016em;color:var(--btn);font-weight:500}
 
 /* small inline figures sized to their image attributes */
 .shot-inline{margin:56px auto 0;text-align:center}
@@ -170,6 +170,8 @@ a:hover{text-decoration:underline}
 }
 
 /* ---------------- FAQ ---------------- */
+#faq .band-head{font-size:clamp(24px,3.4vw,40px)}
+.faq-section-title{font-size:clamp(18px,2.2vw,22px);font-weight:700;letter-spacing:-.015em;text-align:center;margin:clamp(36px,4.5vw,52px) 0 24px;color:var(--ink)}
 .faq-wrap{max-width:820px;margin:52px auto 0;text-align:left;border-top:1px solid var(--hair)}
 .faq-wrap details{border-bottom:1px solid var(--hair)}
 .faq-wrap summary{
@@ -340,7 +342,7 @@ td.gain{color:var(--btn);font-weight:600}
       <figure class="shot-wrap reveal" >
       <img src="screen5.png" width="1745" loading="lazy" decoding="async"
            alt="Diagrams for data visualization.">
-      <figcaption class="shot-caption">Advanced diagrams support based on Mermaid - the common visual code language with AI.</figcaption>
+      <figcaption class="shot-caption">Advanced diagrams support based on Mermaid - the common visual code language, supercharged with AI.</figcaption>
     </figure>	
   </section>
 
@@ -377,11 +379,13 @@ td.gain{color:var(--btn);font-weight:600}
   <!-- ============ FAQ ============ -->
   <section class="band" id="faq">
     <div class="section-content">
-      <h2 class="typ-headline band-head reveal">LLM optimization. <span class="dim">Frequently asked questions.</span></h2>
+      <h2 class="typ-headline band-head reveal">Frequently asked questions.</h2>
 
       <div class="faq-wrap reveal">
 
-        <details open>
+      <h3 class="faq-section-title reveal">LLM optimization</h3>
+
+        <details>
           <summary>Your intelligence, your infrastructure<span class="plus" aria-hidden="true"></span></summary>
           <div class="faq-body">
             <p>Antalogy&rsquo;s integrated AI Assistant chat lets you brainstorm, edit, summarize, or audit documents without leaving your workflow. Unlike locked-in cloud AI suites, you decide where the model runs:</p>
@@ -464,6 +468,61 @@ td.gain{color:var(--btn);font-weight:600}
           </div>
         </details>
 
+        <h3 class="faq-section-title reveal" id="privacy">Privacy &amp; Data Protection</h3>
+
+        <details>
+          <summary>No Data Collection &amp; No Telemetry<span class="plus" aria-hidden="true"></span></summary>
+          <div class="faq-body">
+            <p>We do not track your usage, we do not log your keystrokes, and we do not collect any personal or behavioral data. There are no tracking scripts, analytics tools, or telemetry frameworks embedded in the software. What you write, edit, or process stays strictly on your machine.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>100% Local Architecture<span class="plus" aria-hidden="true"></span></summary>
+          <div class="faq-body">
+            <p>Antalogy is compiled into a native desktop binary using Go and Wails. It does not look for, connect to, or maintain any cloud backend. Your documents (.md and .docx files) are read and written directly to your local file system. We have no servers capable of receiving or storing your documents.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Local OS Webview Execution<span class="plus" aria-hidden="true"></span></summary>
+          <div class="faq-body">
+            <p>The user interface is powered by Svelte and rendered through your operating system's native webview engine (WebView2 on Windows and WebKit on macOS) instead of a bundled Chromium instance. This ensures the app operates isolated within your local system environment with no unauthorized internet connectivity.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Air-Gapped AI Integration (Bring Your Own LLM)<span class="plus" aria-hidden="true"></span></summary>
+          <div class="faq-body">
+            <p>The integrated AI Assistant is entirely dormant by default. Antalogy does not route your text through any proprietary AI proxies or intermediate cloud setups.</p>
+            <ul>
+              <li>Connection to an AI model only occurs if you explicitly input your own OpenAI-compatible API keys or point the app to your own local inference server (such as LM Studio or Ollama).</li>
+              <li>When active, the application communicates directly from your device to the endpoint you specified. No text, prompts, or token matrices are ever sent to us or any third party.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary>Open for Traffic Audits<span class="plus" aria-hidden="true"></span></summary>
+          <div class="faq-body">
+            <p>Because we operate in complete transparency, we invite any user, engineer, or security auditor to drop Antalogy into a secure sandbox or monitor its network traffic using tools like Wireshark. You will find exactly zero unexpected network calls leaving your machine.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Corporate Status<span class="plus" aria-hidden="true"></span></summary>
+          <div class="faq-body">
+            <p>Antalogy is currently developed and maintained by an independent group of software engineers in bootstrap mode. As the product transitions into a formal legal structure for enterprise utilities (such as high-volume B2B bulk conversion pipelines and OEM/White Label licensing), this policy will remain anchored to the core principle that your standalone desktop files are yours alone.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Contact Us<span class="plus" aria-hidden="true"></span></summary>
+          <div class="faq-body">
+            <p>For any privacy-related or technical questions, feel free to reach out directly to the engineering team at: <strong>info@antalogy.com</strong></p>
+          </div>
+        </details>
+
       </div>
     </div>
   </section>
@@ -491,7 +550,7 @@ td.gain{color:var(--btn);font-weight:600}
     <p>Antalogy is available on Windows and macOS. The integrated AI Assistant is compatible with any LLM that supports the OpenAI API; a local or remote LLM endpoint is required for AI features.</p>
 	<p><strong>Copyright © Antalogy Rights Owners, 2026.</strong><p>
     <div class="footer-links">
-      <a href="#benefits">Benefits</a><a href="#assistant">AI Assistant</a><a href="#faq">FAQ</a><a href="#top">Back to top</a>
+      <a href="#benefits">Benefits</a><a href="#assistant">AI Assistant</a><a href="#faq">FAQ</a><a href="#privacy">Privacy Policy</a><a href="#top">Back to top</a>
     </div>
   </div>
 </footer>
