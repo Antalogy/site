@@ -494,9 +494,10 @@ td.gain{color:var(--btn);font-weight:600}
         <details>
           <summary>Air-Gapped AI Integration (Bring Your Own LLM)<span class="plus" aria-hidden="true"></span></summary>
           <div class="faq-body">
-            <p>The integrated AI Assistant is entirely dormant by default. Antalogy does not route your text through any proprietary AI proxies or intermediate cloud setups.</p>
+            <p>The integrated AI Assistant is entirely dormant by default. Antalogy does not route your text through any proprietary AI proxies or intermediate cloud setups. No content is ever sent to an AI model without your explicit, manual action.</p>
             <ul>
               <li>Connection to an AI model only occurs if you explicitly input your own OpenAI-compatible API keys or point the app to your own local inference server (such as LM Studio or Ollama).</li>
+              <li>When active, you may optionally attach your open document content, selected text, or a local file to a chat message. This is done solely through dedicated buttons in the Assistant pane — nothing is attached automatically or in the background.</li>
               <li>When active, the application communicates directly from your device to the endpoint you specified. No text, prompts, or token matrices are ever sent to us or any third party.</li>
             </ul>
           </div>
