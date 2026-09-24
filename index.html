@@ -239,7 +239,7 @@ td.gain{color:var(--btn);font-weight:600}
 
 /* ---------------- reveal ---------------- */
 @media (prefers-reduced-motion: no-preference){
-  .js .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.25,.6,.3,1),transform .8s cubic-bezier(.25,.6,.3,1)}
+  .js .reveal{opacity:1;transform:translateY(22px);transition:opacity .8s cubic-bezier(.25,.6,.3,1),transform .8s cubic-bezier(.25,.6,.3,1)}
   .js .reveal.in{opacity:1;transform:none}
 }
 @media (prefers-reduced-motion: reduce){
@@ -286,8 +286,6 @@ td.gain{color:var(--btn);font-weight:600}
     <div class="section-content">
       <div class="benefits-lede reveal">
         <h2 class="typ-headline">The real benefits.</h2>
-      </div>
-
       <div class="feature reveal">
         <h3 class="typ-feature band-head">Word-like editor. <span class="dim">For Markdown.</span></h3>
 		<h3 class="typ-feature band-head">100% Local-first. <span class="dim">No cloud.</span></h3>
@@ -300,6 +298,7 @@ td.gain{color:var(--btn);font-weight:600}
           <li>Available on Windows and macOS.</li>
         </ul>
       </div>
+
     </div>	
   </section>
   
@@ -526,7 +525,7 @@ td.gain{color:var(--btn);font-weight:600}
 
   <!-- ============ closer ============ -->
   <section class="band band-alt closer">
-    <div class="section-content reveal">
+    <div class="section-content" >
       <img class="hero-icon" src="appicon.webp" alt="" width="360" height="416">
       <h2 class="typ-headline">Local-first.<br>AI on your own.</h2>
       <p class="band-sub" id="download">Available on Windows, macOS and Linux.</p>
@@ -541,16 +540,15 @@ td.gain{color:var(--btn);font-weight:600}
 	  </div>
       <div class="closer-ctas">	  
         <a class="pill" href="https://github.com/Antalogy/releases/releases/download/v0.95.0/antalogy.tgz">Linux - executable</a>
- 		
       </div>
-      <p class="band-sub">Zero telemetry. No document format lock-in.</p>
+      <p class="band-sub" >Zero telemetry. No document format lock-in.</p>
     </div>
   </section>
 
 </main>
 
 <!-- ============ footer ============ -->
-<footer class="footer">
+<footer class="footer" >
   <div class="section-content">
     <p>Antalogy — AI-ready desktop word processor. The familiarity of a Word interface for Markdown. The privacy of local-first. The LLM of your choice.</p>
     <p>Antalogy is available on Windows and macOS. The integrated AI Assistant is compatible with any LLM that supports the OpenAI API; a local or remote LLM endpoint is required for AI features.</p>
