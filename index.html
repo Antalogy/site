@@ -29,7 +29,7 @@
   --font:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html{-webkit-text-size-adjust:100%}
 body{
   font-family:var(--font);color:var(--ink);background:#fff;
   font-size:17px;line-height:1.47059;font-weight:400;letter-spacing:-.022em;
@@ -94,7 +94,7 @@ a:hover{text-decoration:underline}
 .pill:hover{background:var(--btn-hover);text-decoration:none}
 
 /* ---------------- hero ---------------- */
-.hero{padding:72px 0 96px;text-align:center;background:#fff}
+.hero{padding:28px 0 32px;text-align:center;background:#fff}
 .hero-icon{width:clamp(112px,14vw,150px);margin:0 auto 34px;filter:drop-shadow(0 14px 28px rgba(0,60,140,.18))}
 .hero h1{max-width:820px;margin:0 auto}
 .hero .typ-intro{max-width:660px;margin:26px auto 0;color:var(--ink)}
@@ -106,7 +106,7 @@ a:hover{text-decoration:underline}
 }
 
 /* ---------------- bands ---------------- */
-.band{padding:clamp(42px,5.5vw,65px) 0;text-align:center}
+.band{padding:clamp(0px,3.5vw,44px) 0;text-align:center}
 .band-alt{background:var(--bg-alt)}
 .band-dark{background:#000;color:#f5f5f7}
 .band-head{max-width:780px;margin:0 auto}
@@ -114,7 +114,7 @@ a:hover{text-decoration:underline}
 .band-dark .band-sub{color:var(--gray-dk)}
 
 /* the real benefits header sits atop feature 1 */
-.benefits-lede{margin-bottom:clamp(64px,8vw,96px)}
+.benefits-lede{margin-bottom:clamp(22px,6vw,32px)}
 
 /* ---------------- feature blocks ---------------- */
 .feature + .feature{margin-top:0}
@@ -138,7 +138,7 @@ a:hover{text-decoration:underline}
 .shot-caption{margin-top:18px;font-size:17px;letter-spacing:-.016em;color:var(--btn);font-weight:500}
 
 /* small inline figures sized to their image attributes */
-.shot-inline{margin:56px auto 0;text-align:center}
+.shot-inline{margin:28px auto 0;text-align:center}
 .shot-inline img{
   display:block;width:var(--shot-w,auto);height:auto;margin:0 auto;
   max-width:100%;
@@ -171,7 +171,7 @@ a:hover{text-decoration:underline}
 
 /* ---------------- FAQ ---------------- */
 #faq .band-head{font-size:clamp(24px,3.4vw,40px)}
-.faq-section-title{font-size:clamp(18px,2.2vw,22px);font-weight:700;letter-spacing:-.015em;text-align:center;margin:clamp(36px,4.5vw,52px) 0 24px;color:var(--ink)}
+.faq-section-title{font-size:clamp(18px,2.2vw,22px);font-weight:700;letter-spacing:-.015em;text-align:center;margin:clamp(12px,4.5vw,52px) 0 24px;color:var(--ink)}
 .faq-wrap{max-width:820px;margin:52px auto 0;text-align:left;border-top:1px solid var(--hair)}
 .faq-wrap details{border-bottom:1px solid var(--hair)}
 .faq-wrap summary{
@@ -282,7 +282,7 @@ td.gain{color:var(--btn);font-weight:600}
   </header>
 
   <!-- ============ benefits: feature 1 ============ -->
-  <section class="band band-alt" id="benefits">
+  <section class="band" id="benefits">
     <div class="section-content">
       <div class="benefits-lede reveal">
         <h2 class="typ-headline">The real benefits.</h2>
@@ -295,10 +295,15 @@ td.gain{color:var(--btn);font-weight:600}
           <li>Built-in navigation and search.</li>
           <li>No document format lock-in.</li>
           <li>Zero telemetry.</li>
-          <li>Available on Windows and macOS.</li>
+          <li>Available on Windows, macOS and Linux.</li>
         </ul>
       </div>
-
+     <figure class="shot-wrap reveal">
+      <img src="screen-macos.png" width="2940" height="1912" loading="lazy" decoding="async"
+           alt="Antalogy editor window: a Word-style ribbon with font and paragraph controls, a navigation outline of document headings on the left, and a formatted Markdown document in the main pane.">
+      <figcaption class="shot-caption">A familiar ribbon and multi-window user interface — with a plain .md file underneath.</figcaption>
+    </figure> 
+		  
     </div>	
   </section>
   
@@ -324,23 +329,13 @@ td.gain{color:var(--btn);font-weight:600}
         </ul>
       </div>
     </div>
-     <figure class="shot-wrap reveal">
-      <img src="screen3.png" width="1684" height="1275" loading="lazy" decoding="async"
-           alt="Antalogy editor window: a Word-style ribbon with font and paragraph controls, a navigation outline of document headings on the left, and a formatted Markdown document in the main pane.">
-      <figcaption class="shot-caption">A familiar ribbon and outline — with a plain .md file underneath.</figcaption>
-    </figure> 
-    <figure class="shot-wrap reveal">
-      <img src="screen4.png" width="1684" height="1275" loading="lazy" decoding="async"
-           alt="Antalogy showing a table imported from a Word document with its structure preserved, and the integrated AI Assistant chat panel open on the right.">
-      <figcaption align = "center" class="shot-caption">An imported document, table intact — with the AI Assistant open alongside.</figcaption>
-    </figure>  
-      <figure class="shot-wrap reveal" >
-      <img src="screen5.png" width="1745" loading="lazy" decoding="async"
-           alt="Diagrams for data visualization.">
-      <figcaption class="shot-caption">Advanced diagrams support based on Mermaid - the common visual code language, supercharged with AI.</figcaption>
-    </figure>	
-  </section>
+  <!-- ============ docx import screen ============ -->
 
+    <figure class="shot-wrap reveal">
+      <img src="screen-windows.png" width="2559" height="1599" loading="lazy" decoding="async"
+           alt="Antalogy showing a table and lists in cells imported from a Word document with its structure preserved.">
+      <figcaption align = "center" class="shot-caption">Antalogy showing a table and lists in cells imported from a Word document with its structure preserved.</figcaption>
+  </section>
   <!-- ============ benefits: feature 3 (AI) ============ -->
   <section class="band band-dark" id="assistant">
     <div class="section-content">
@@ -366,11 +361,31 @@ td.gain{color:var(--btn);font-weight:600}
         </div>
       </div>
     </div>
-	
   </section>
-
-
-
+  <!-- ============ benefits: feature 1 ============ -->
+  <section class="band" id="benefits">
+    <div class="section-content">
+      <div class="benefits-lede reveal">
+        <h2 class="typ-headline">Air-gapped AI with local LLM.</h2>
+		<h3 class="typ-feature band-head"><span class="dim">Out-of-the-box integrations.</span></h3>
+      <div class="feature reveal">
+        <ul class="checks">
+		  <li>LM Studio / Bionic, Ollama, Unsloth Desktop.</li>
+		  <li>Localhost autodiscovery for know LLMs.</li>		  
+		  <li>Generic Open AI API compatible LLM harness.</li>
+		  <li>Multiple LLM Profiles for one-click changes.</li>
+		  <li>AI Assistant chat context per document window with one-click model selection.</li>
+          <li>User-friendly with no requirements for OS environment variables.</li>		  
+        </ul>
+      </div>
+ 
+    <figure class="shot-wrap reveal">
+      <img src="screen-linux.png" width="2094" height="1297" loading="lazy" decoding="async"
+           alt="Antalogy editing a Markdown project plan with a Word-style ribbon, an AI Assistant panel generating a project stages and milestones table, and the Settings window showing local LLM engines and profiles.">
+      <figcaption class="shot-caption">Antalogy provides a Word-like editing experience for Markdown&nbsp;(.md), with an integrated AI Assistant connected to your local models on Ollama, LM Studio / Bionic,  Unsloth Desktop and other Open AI API-compatible harnesses.</figcaption>
+    </figure>
+   </div>	
+  </section>
   <!-- ============ FAQ ============ -->
   <section class="band" id="faq">
     <div class="section-content">
@@ -390,6 +405,9 @@ td.gain{color:var(--btn);font-weight:600}
               <li><strong>Cloud:</strong> plug into your preferred LLM provider for maximum capability.</li>
             </ul>
             <p>Antalogy supports any LLM with an OpenAI-compatible API. You can switch endpoints per document, per LLM chat, or per compliance tier. The AI Assistant adapts to your security posture without changing your workflow.</p>
+			<p>Out-of-the-box support, optimization and autodiscovery for <strong>LM Studio, Ollama or Unsloth Desktop.</strong></p>
+			<p><strong>Multiple LLM profiles</strong> for one-click switch in AI Assistant.
+			</p>
           </div>
         </details>
 
@@ -489,11 +507,11 @@ td.gain{color:var(--btn);font-weight:600}
         <details>
           <summary>Air-Gapped AI Integration (Bring Your Own LLM)<span class="plus" aria-hidden="true"></span></summary>
           <div class="faq-body">
-            <p>The integrated AI Assistant is entirely dormant by default. Antalogy does not route your text through any proprietary AI proxies or intermediate cloud setups. No content is ever sent to an AI model without your explicit, manual action.</p>
+            <p>The integrated AI Assistant is entirely dormant by default. Antalogy does not route your text through any proprietary AI proxies or intermediate cloud setups. No content is ever sent to an LLM without your explicit, manual action.</p>
             <ul>
-              <li>Connection to an AI model only occurs if you explicitly input your own OpenAI-compatible API keys or point the app to your own local inference server (such as LM Studio or Ollama).</li>
+              <li>Content exchange with LLM only occurs if you explicitly add and input your own OpenAI-compatible API keys or point the app to your own local inference server (such as LM Studio, Ollama or Unsloth Desktop). No requirements for additional environment variables for Ollama nor Unsloth as for many apps like OnlyOffice.</li>
               <li>When active, you may optionally attach your open document content, selected text, or a local file to a chat message. This is done solely through dedicated buttons in the Assistant pane — nothing is attached automatically or in the background.</li>
-              <li>When active, the application communicates directly from your device to the endpoint you specified. No text, prompts, or token matrices are ever sent to us or any third party.</li>
+              <li>When 'Enable AI Assistant' option in Settings is checked, the application autodiscovers local LLMs and configured LLM Profiles for their availability status and communicates directly from your device to the endpoint you specified in profiles. No text, prompts, or token matrices are ever sent to us or any third party.</li>
             </ul>
           </div>
         </details>
@@ -501,14 +519,14 @@ td.gain{color:var(--btn);font-weight:600}
         <details>
           <summary>Open for Traffic Audits<span class="plus" aria-hidden="true"></span></summary>
           <div class="faq-body">
-            <p>Because we operate in complete transparency, we invite any user, engineer, or security auditor to drop Antalogy into a secure sandbox or monitor its network traffic using tools like Wireshark. You will find exactly zero unexpected network calls leaving your machine.</p>
+            <p>Because we operate in complete transparency, we invite any user, engineer, or security auditor to drop Antalogy into a secure sandbox or monitor its network traffic using tools like Wireshark. As you switch off 'Enable AI Assistant' option in Settings you will find exactly zero unexpected network calls leaving your machine.</p>
           </div>
         </details>
 
         <details>
           <summary>Corporate Status <span class="plus" aria-hidden="true"></span></summary>
           <div class="faq-body">
-            <p>Antalogy is currently developed and maintained by an independent group of software engineers in bootstrap mode. As the product transitions into a formal legal structure for enterprise utilities (such as high-volume B2B bulk conversion pipelines and OEM/White Label licensing), this policy will remain anchored to the core principle that your standalone desktop files are yours alone.</p>
+            <p>Antalogy is currently developed and maintained by an independent group of software engineers in bootstrap mode. As the product transitions into a formal legal structure for enterprise utilities (such as high-volume B2B bulk conversion pipelines and OEM/White Label/Bundle licensing), this policy will remain anchored to the core principle that your standalone desktop files are yours alone.</p>
           </div>
         </details>
 
@@ -531,16 +549,16 @@ td.gain{color:var(--btn);font-weight:600}
       <p class="band-sub" id="download">Available on Windows, macOS and Linux.</p>
       <div class="closer-ctas">
         <a class="pill" href="https://apps.microsoft.com/detail/9N0ZXQZFCZKS">Windows - Microsoft Store</a>	  
-        <a class="pill" href="https://github.com/Antalogy/releases/releases/download/0.95.0/antalogy.msi">Windows - .msi</a>
-        <a class="pill" href="https://github.com/Antalogy/releases/releases/download/0.95.0/antalogy.zip">Windows - .exe</a>	
+        <a class="pill" href="https://github.com/Antalogy/releases/releases/download/0.97.0/antalogy.msi">Windows - .msi</a>
+        <a class="pill" href="https://github.com/Antalogy/releases/releases/download/0.97.0/antalogy.zip">Windows - .exe</a>	
       </div>		
       <div class="closer-ctas">
-        <a class="pill" href="https://github.com/Antalogy/releases/releases/download/0.95.0/antalogy.dmg">macOS - .dmg (Apple Silicon)</a>
-        <a class="pill" href="https://github.com/Antalogy/releases/releases/download/0.95.0/antalogy.app.zip">macOS - .app (Apple Silicon)</a>
+        <a class="pill" href="https://github.com/Antalogy/releases/releases/download/0.97.0/antalogy.dmg">macOS - .dmg (Apple Silicon)</a>
+        <a class="pill" href="https://github.com/Antalogy/releases/releases/download/0.97.0/antalogy.app.zip">macOS - .app (Apple Silicon)</a>
 	  </div>
       <div class="closer-ctas">	  
-        <a class="pill" href="https://github.com/Antalogy/releases/releases/download/0.95.0/antalogy.tgz">Linux - executable</a>
-        <a class="pill" href="https://github.com/Antalogy/releases/releases/download/0.95.0/antalogy.flatpak">Linux - flatpak</a>
+        <a class="pill" href="https://github.com/Antalogy/releases/releases/download/0.97.0/antalogy.tgz">Linux - executable</a>
+        <a class="pill" href="https://github.com/Antalogy/releases/releases/download/0.97.0/antalogy.flatpak">Linux - flatpak</a>
 		
       </div>
       <p class="band-sub" >Zero telemetry. No document format lock-in.</p>
