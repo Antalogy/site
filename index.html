@@ -312,7 +312,7 @@ td.gain{color:var(--btn);font-weight:600}
   <!-- ============ benefits: feature 2 ============ -->
 
     <figure class="shot-inline reveal" style="--shot-w:246px">
-      <img src="word2antalogy.png" width="246" height="94" align="center" loading="lazy" decoding="async"
+      <img src="word-antalogy.png" width="246" height="94" align="center" loading="lazy" decoding="async"
            alt="Antalogy converts .docx to .md in one-click.">
 	</figure> 
 	
@@ -320,12 +320,16 @@ td.gain{color:var(--btn);font-weight:600}
     <div class="section-content">
  	
       <div class="feature reveal">	  		   
-        <h3 class="typ-feature band-head">Opens Word .docx. <span class="dim">Saves Markdown&nbsp;.md.</span></h3>
+        <h3 class="typ-feature band-head">Opens Word .docx. <br/><span class="dim">Saves Markdown&nbsp;.md.</span><br/>Export .md to .docx</h3>
         <ul class="checks">
-          <li>One-click import of Microsoft Word (.docx) files.</li>
+          <li>One-click import of Microsoft Word (.docx).</li>
           <li>Your original .docx files are never changed.</li>
           <li>Formatting, lists, tables and images are preserved.</li>
           <li>Embedded EMF/WMF images are converted to cross-platform PNG where possible.</li>
+		  <li>One-click export .md to .docx with styles from Word document (select it in Settings).</li>
+		  <li>Mermaid-diagrams are exporting to .docx as high-quality PNG.</li>
+		  <li>Word is not needed to import and export.</li>
+		  <li>Import/export on Windows, macOS, Linux.</li>
         </ul>
       </div>
     </div>
@@ -335,6 +339,13 @@ td.gain{color:var(--btn);font-weight:600}
       <img src="screen-windows.png" width="2559" height="1599" loading="lazy" decoding="async"
            alt="Antalogy showing a table and lists in cells imported from a Word document with its structure preserved.">
       <figcaption align = "center" class="shot-caption">Antalogy showing a table and lists in cells imported from a Word document with its structure preserved.</figcaption>
+
+	  
+    <figure class="shot-wrap reveal">
+      <img src="export-with-mermaid-to-docx.png" width="2878" height="1826" loading="lazy" decoding="async"
+           alt="Antalogy exports .md with embedded images and Mermaid diagrams to a .docx document on Windows, macOS and Linux.">
+      <figcaption align = "center" class="shot-caption">Antalogy exports .md with embedded images and Mermaid diagrams to .docx document on Windows, macOS and Linux.</figcaption>
+    </figure>
   </section>
   <!-- ============ benefits: feature 3 (AI) ============ -->
   <section class="band band-dark" id="assistant">
@@ -370,8 +381,8 @@ td.gain{color:var(--btn);font-weight:600}
 		<h3 class="typ-feature band-head"><span class="dim">Out-of-the-box integrations.</span></h3>
       <div class="feature reveal">
         <ul class="checks">
-		  <li>LM Studio / Bionic, Ollama, Unsloth Desktop.</li>
-		  <li>Localhost autodiscovery for know LLMs.</li>		  
+		  <li>LM Studio / Bionic, Ollama, Unsloth Desktop, Ollama.</li>
+		  <li>Localhost autodiscovery for known LLMs.</li>		  
 		  <li>Generic Open AI API compatible LLM harness.</li>
 		  <li>Multiple LLM Profiles for one-click changes.</li>
 		  <li>AI Assistant chat context per document window with one-click model selection.</li>
@@ -549,16 +560,16 @@ td.gain{color:var(--btn);font-weight:600}
       <p class="band-sub" id="download">Available on Windows, macOS and Linux.</p>
       <div class="closer-ctas">
         <a class="pill" href="https://apps.microsoft.com/detail/9N0ZXQZFCZKS">Windows - Microsoft Store</a>	  
-        <a class="pill" href="https://github.com/Antalogy/releases/releases/download/0.97.2/antalogy.msi">Windows - .msi</a>
-        <a class="pill" href="https://github.com/Antalogy/releases/releases/download/0.97.2/antalogy.zip">Windows - .exe</a>	
+        <a class="pill" href="https://github.com/Antalogy/releases/releases/download/1.0.1/antalogy.msi">Windows - .msi</a>
+        <a class="pill" href="https://github.com/Antalogy/releases/releases/download/1.0.1/antalogy.zip">Windows - .exe</a>	
       </div>		
       <div class="closer-ctas">
-        <a class="pill" href="https://github.com/Antalogy/releases/releases/download/0.97.2/antalogy.dmg">macOS - .dmg (Apple Silicon)</a>
-        <a class="pill" href="https://github.com/Antalogy/releases/releases/download/0.97.2/antalogy.app.zip">macOS - .app (Apple Silicon)</a>
+        <a class="pill" href="https://github.com/Antalogy/releases/releases/download/1.0.1/antalogy.dmg">macOS - .dmg (Apple Silicon)</a>
+        <a class="pill" href="https://github.com/Antalogy/releases/releases/download/1.0.1.antalogy.app.zip">macOS - .app (Apple Silicon)</a>
 	  </div>
       <div class="closer-ctas">	  
-        <a class="pill" href="https://github.com/Antalogy/releases/releases/download/0.97.2/antalogy.tar.gz">Linux - executable</a>
-        <a class="pill" href="https://github.com/Antalogy/releases/releases/download/0.97.2/antalogy.flatpak">Linux - flatpak</a>
+        <a class="pill" href="https://github.com/Antalogy/releases/releases/download/1.0.1/antalogy.tar.gz">Linux - executable</a>
+        <a class="pill" href="https://github.com/Antalogy/releases/releases/download/1.0.1/antalogy.flatpak">Linux - flatpak</a>
 		
       </div>
       <p class="band-sub" >Zero telemetry. No document format lock-in.</p>
