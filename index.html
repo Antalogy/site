@@ -99,11 +99,20 @@ a:hover{text-decoration:underline}
 .hero h1{max-width:820px;margin:0 auto}
 .hero .typ-intro{max-width:660px;margin:26px auto 0;color:var(--ink)}
 .hero-links{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 40px;margin-top:26px}
-.hero-banner{max-width:1080px;margin:60px auto 0;padding:0 22px}
-.hero-banner img{
-  width:100%;border-radius:clamp(16px,3vw,28px);
-  box-shadow:0 30px 70px -30px rgba(0,40,100,.35);
+.announce{max-width:1080px;margin:60px auto 0;padding:0 22px}
+.announce-card{
+  display:flex;align-items:center;gap:32px;text-align:left;
+  background:linear-gradient(135deg,#eef5ff 0%,#f7faff 60%,#fff 100%);
+  border:1px solid rgba(0,113,227,.18);border-radius:24px;
+  padding:28px;box-shadow:0 30px 70px -30px rgba(0,60,140,.25);
 }
+.announce-card img{flex:none;width:clamp(160px,32%,320px);border-radius:16px}
+.announce-body p{font-size:17px;line-height:1.5;letter-spacing:-.022em;color:var(--ink)}
+.announce-body .lead{font-weight:600}
+.announce-body p + p{margin-top:14px}
+.announce-body .free{color:var(--btn);font-weight:600}
+.announce-body .note{color:var(--gray)}
+@media(max-width:734px){.announce-card{flex-direction:column;align-items:center}}
 
 /* ---------------- bands ---------------- */
 .band{padding:clamp(0px,3.5vw,44px) 0;text-align:center}
@@ -261,6 +270,7 @@ td.gain{color:var(--btn);font-weight:600}
       <a href="#benefits">Benefits</a>
       <a href="#assistant">AI&nbsp;Assistant</a>
       <a href="#faq">FAQ</a>
+      <!-- <a href="founder-corner.html">Founder's corner</a> -->
       <a class="ln-pill" href="#download">Download</a>
     </div>
   </div>
@@ -275,9 +285,18 @@ td.gain{color:var(--btn);font-weight:600}
       <h1 class="typ-super">The freedom of Markdown.<br>The power of Word.</h1>
       <p class="typ-intro">Antalogy is an AI-ready desktop word processor — the familiarity of a Word interface for Markdown, the privacy of local-first, and the LLM of your choice.</p>
     </div>
-    <div class="hero-banner">
-      <img src="general.jpg" width="1024" height="649" fetchpriority="high"
-           alt="A knowledge worker at a laptop surrounded by floating documents, checklists and charts.">
+    <div class="announce">
+      <div class="announce-card reveal">
+        <img src="general.jpg" width="1024" height="649"
+             alt="A knowledge worker at a laptop surrounded by floating documents, checklists and charts.">
+        <div class="announce-body">
+          <p class="lead">09 November 2026:<br/>
+		  The release of Antalogy Markdown Word Processor is officially live following its preview period!</p>
+          <p>Antalogy is now a fully featured, Word-equivalent processor for Markdown, offering seamless import and export of .docx documents—complete with styles, images, and Mermaid diagrams. It features an out-of-the-box AI Assistant that connects natively with local, corporate, and cloud-based LLMs compatible with the OpenAI API.</p>
+          <p class="free">Free to use without subscriptions!</p>
+          <!-- <p class="note"><a href="founder-corner.html">Visit the Founder's Corner page</a> to get exclusive project insights.</p> -->
+        </div>
+      </div>
     </div>
   </header>
 
@@ -302,24 +321,24 @@ td.gain{color:var(--btn);font-weight:600}
       <img src="screen-macos.png" width="2940" height="1912" loading="lazy" decoding="async"
            alt="Antalogy editor window: a Word-style ribbon with font and paragraph controls, a navigation outline of document headings on the left, and a formatted Markdown document in the main pane.">
       <figcaption class="shot-caption">A familiar ribbon and multi-window user interface — with a plain .md file underneath.</figcaption>
-    </figure> 
-		  
-    </div>	
-  </section>
-  
+    </figure>
 
-  
+    </div>
+  </section>
+
+
+
   <!-- ============ benefits: feature 2 ============ -->
 
     <figure class="shot-inline reveal" style="--shot-w:246px">
       <img src="word-antalogy.png" width="246" height="94" align="center" loading="lazy" decoding="async"
            alt="Antalogy converts .docx to .md in one-click.">
-	</figure> 
-	
+	</figure>
+
   <section class="band">
     <div class="section-content">
- 	
-      <div class="feature reveal">	  		   
+
+      <div class="feature reveal">
         <h3 class="typ-feature band-head">Opens Word .docx. <br/><span class="dim">Saves Markdown&nbsp;.md.</span><br/>Export .md to .docx</h3>
         <ul class="checks">
           <li>One-click import of Microsoft Word (.docx).</li>
@@ -340,7 +359,7 @@ td.gain{color:var(--btn);font-weight:600}
            alt="Antalogy showing a table and lists in cells imported from a Word document with its structure preserved.">
       <figcaption align = "center" class="shot-caption">Antalogy showing a table and lists in cells imported from a Word document with its structure preserved.</figcaption>
 
-	  
+
     <figure class="shot-wrap reveal">
       <img src="export-with-mermaid-to-docx.png" width="2878" height="1826" loading="lazy" decoding="async"
            alt="Antalogy exports .md with embedded images and Mermaid diagrams to a .docx document on Windows, macOS and Linux.">
@@ -382,20 +401,20 @@ td.gain{color:var(--btn);font-weight:600}
       <div class="feature reveal">
         <ul class="checks">
 		  <li>LM Studio / Bionic, Unsloth Desktop, Lemonade Server, Ollama.</li>
-		  <li>Localhost autodiscovery for known LLMs.</li>		  
+		  <li>Localhost autodiscovery for known LLMs.</li>
 		  <li>Generic Open AI API compatible LLM harness.</li>
 		  <li>Multiple LLM Profiles for one-click changes.</li>
 		  <li>AI Assistant chat context per document window with one-click model selection.</li>
-          <li>User-friendly with no requirements for OS environment variables.</li>		  
+          <li>User-friendly with no requirements for OS environment variables.</li>
         </ul>
       </div>
- 
+
     <figure class="shot-wrap reveal">
       <img src="screen-linux.png" width="2094" height="1297" loading="lazy" decoding="async"
            alt="Antalogy editing a Markdown project plan with a Word-style ribbon, an AI Assistant panel generating a project stages and milestones table, and the Settings window showing local LLM engines and profiles.">
       <figcaption class="shot-caption">Antalogy provides a Word-like editing experience for Markdown&nbsp;(.md), with an integrated AI Assistant connected to your local models on LM Studio / Bionic,  Unsloth Desktop, Lemonade Server, Ollama and other Open AI API-compatible harnesses.</figcaption>
     </figure>
-   </div>	
+   </div>
   </section>
   <!-- ============ FAQ ============ -->
   <section class="band" id="faq">
@@ -559,18 +578,18 @@ td.gain{color:var(--btn);font-weight:600}
       <h2 class="typ-headline">Local-first.<br>AI on your own.</h2>
       <p class="band-sub" id="download">Available on Windows, macOS and Linux.</p>
       <div class="closer-ctas">
-        <a class="pill" href="https://apps.microsoft.com/detail/9N0ZXQZFCZKS">Windows - Microsoft Store</a>	  
+        <a class="pill" href="https://apps.microsoft.com/detail/9N0ZXQZFCZKS">Windows - Microsoft Store</a>
         <a class="pill" href="https://github.com/Antalogy/releases/releases/download/1.0.1/antalogy.msi">Windows - .msi</a>
-        <a class="pill" href="https://github.com/Antalogy/releases/releases/download/1.0.1/antalogy.zip">Windows - .exe</a>	
-      </div>		
+        <a class="pill" href="https://github.com/Antalogy/releases/releases/download/1.0.1/antalogy.zip">Windows - .exe</a>
+      </div>
       <div class="closer-ctas">
         <a class="pill" href="https://github.com/Antalogy/releases/releases/download/1.0.1/antalogy.dmg">macOS - .dmg (Apple Silicon)</a>
         <a class="pill" href="https://github.com/Antalogy/releases/releases/download/1.0.1.antalogy.app.zip">macOS - .app (Apple Silicon)</a>
 	  </div>
-      <div class="closer-ctas">	  
+      <div class="closer-ctas">
         <a class="pill" href="https://github.com/Antalogy/releases/releases/download/1.0.1/antalogy.tar.gz">Linux - executable</a>
         <a class="pill" href="https://github.com/Antalogy/releases/releases/download/1.0.1/antalogy.flatpak">Linux - flatpak</a>
-		
+
       </div>
       <p class="band-sub" >Zero telemetry. No document format lock-in.</p>
     </div>
